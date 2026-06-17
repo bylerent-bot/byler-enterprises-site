@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Byler Enterprises · A Family Real Estate Company · Virginia Beach</title>
+<meta name="description" content="Byler Enterprises is a private, family-owned real estate company in Virginia Beach, Virginia. Three generations of owning, operating, and developing commercial property in Hampton Roads since 1964. Licensed brokerage through Byler Realty.">
+<!-- PREVIEW GATE: remove the next two lines (and robots.txt Disallow) only at go-live, after Mom's sign-off. -->
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'">
+<meta name="theme-color" content="#1d2b3f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='9'%20fill='%231d2b3f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-size='40'%20fill='%23f6f2e9'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<style>
+  /* ---- Self-hosted fonts (SIL OFL 1.1, Latin subset, no third-party request) ---- */
+  @font-face{font-family:'Libre Caslon Display';src:url('fonts/libre-caslon-display-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+
+  :root{
+    --navy:#1d2b3f; --cream:#f6f2e9; --paper:#fcfaf5;
+    --slate:#3a4452; --gold:#7a5b1a; --tan:#c9b896; --rule:#d8d2c4;
+    --display:'Libre Caslon Display','Hoefler Text',Georgia,'Times New Roman',serif;
+    --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--navy);background:var(--cream);line-height:1.62;font-size:18px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:940px;margin:0 auto;padding:0 32px}
+
+  a{color:var(--gold)}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:var(--cream);padding:10px 16px;z-index:10}
+  .skip:focus{left:8px;top:8px}
+
+  /* ---- Masthead ---- */
+  header{background:var(--navy);color:var(--cream)}
+  .brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:18px 0}
+  .brand{font-family:var(--display);font-size:18px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);text-decoration:none}
+  nav a{color:var(--tan);text-decoration:none;font-size:13px;letter-spacing:.13em;text-transform:uppercase;margin-left:26px}
+  nav a:hover,nav a:focus-visible{color:var(--cream)}
+
+  /* ---- Hero (engraved letterhead, no imagery) ---- */
+  .hero{text-align:center;padding:104px 0 96px;background:var(--cream)}
+  .eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,8vw,82px);line-height:1.04;letter-spacing:.01em;margin:22px 0 0}
+  .hero .goldrule{width:78px;height:2px;background:var(--gold);margin:26px auto 28px}
+  .hero .tagline{font-style:italic;font-size:clamp(20px,3vw,27px);color:var(--slate);max-width:24ch;margin:0 auto}
+  .hero .standfirst{font-size:17.5px;color:var(--slate);max-width:54ch;margin:22px auto 0}
+
+  /* ---- Sections ---- */
+  section{padding:84px 0}
+  .hairline{border-top:1px solid var(--rule)}
+  .kicker{font-family:var(--body);font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:30px}
+  .lede{font-family:var(--display);font-size:clamp(24px,3.4vw,32px);line-height:1.32;max-width:20ch;margin-bottom:26px;color:var(--navy)}
+  .prose{max-width:64ch}
+  .prose p+p{margin-top:1.15em}
+
+  /* ---- Reversed credo band ---- */
+  .band{background:var(--navy);color:var(--cream);text-align:center;padding:76px 0}
+  .band p{font-family:var(--display);font-size:clamp(23px,3.4vw,31px);line-height:1.4;max-width:26ch;margin:0 auto}
+  .band .tanrule{width:64px;height:1px;background:var(--tan);margin:0 auto 30px}
+
+  /* ---- What we do (hairline columns, not boxes) ---- */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0}
+  .pillar{padding:6px 30px}
+  .pillar:not(:first-child){border-left:1px solid var(--rule)}
+  .pillar .tick{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+  .pillar h3{font-family:var(--display);font-weight:400;font-size:23px;margin-bottom:12px}
+  .pillar p{font-size:16px;color:var(--slate)}
+
+  /* ---- Byler Realty ---- */
+  .finehead{font-size:14.5px;color:var(--slate);margin-top:1.5em;line-height:1.7}
+
+  /* ---- Principals ---- */
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+  .person h3{font-family:var(--display);font-weight:400;font-size:23px}
+  .person .role{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:7px 0 13px}
+  .person p{font-size:16px;color:var(--slate)}
+
+  /* ---- Contact ---- */
+  .contact dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:6px}
+  .contact dt{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:9px}
+  .contact dd{font-size:17.5px;color:var(--navy);line-height:1.55}
+  .contact a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+
+  /* ---- Footer ---- */
+  footer{background:var(--navy);color:#c4beb0;padding:44px 0;font-size:14px}
+  footer .fine{margin-top:13px;color:#9b9587;font-size:12.5px;line-height:1.8;max-width:78ch}
+  footer a{color:var(--tan)}
+
+  /* ---- Motion (one quiet reveal, opt-out honored) ---- */
+  [data-reveal].pre{opacity:0;transform:translateY(14px)}
+  [data-reveal].in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+  @media (prefers-reduced-motion:reduce){[data-reveal].pre{opacity:1;transform:none}}
+
+  @media (max-width:620px){
+    .wrap{padding:0 22px}
+    nav a{margin-left:16px}
+    section{padding:60px 0}
+    .pillar{padding:26px 0}
+    .pillar:not(:first-child){border-left:0;border-top:1px solid var(--rule)}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap brandbar">
+    <a class="brand" href="#top">Byler&nbsp;Enterprises</a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">What&nbsp;We&nbsp;Do</a>
+      <a href="#realty">Byler&nbsp;Realty</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Virginia Beach, Virginia &nbsp;·&nbsp; Established 1964</p>
+      <h1>Byler Enterprises</h1>
+      <div class="goldrule" role="presentation"></div>
+      <p class="tagline">Some companies are built to be sold. Ours was built to be kept.</p>
+      <p class="standfirst">A family real estate company, owning, operating, and developing in Hampton Roads for three generations.</p>
+    </div>
+  </div>
+
+  <section id="about" class="hairline" data-reveal>
+    <div class="wrap">
+      <h2 class="kicker">About</h2>
+      <p class="lede">We build carefully, hold what we build, and run it ourselves.</p>
+      <div class="prose">
+        <p>In 1936, a fifteen-year-old named Clarence Harvey Byler moved with his family from Burton, Ohio to the farmland of Princess Anne County, the place that would become Virginia Beach. After serving in the Air Force he started building houses, and by the 1960s "Curly" Byler had become one of the city's leading residential developers. He created the Larkspur neighborhood in Kempsville, hundreds of homes on treed lots, and named its main road for his friend and attorney Edwin Kellam. In January 1964, with Larkspur in full stride, he incorporated Tidewater Investment Co. to hold what he was building.</p>
+        <p>He held what he built and ran it himself. The family has kept that philosophy for sixty years and three generations, from those first homes to the commercial properties the company still owns and operates today.</p>
+        <p>Today the company is led by his daughter, Kathryn N. Byler, and his grandson, Patrick Byler Clark. We remain what we have always been: private, family-owned, and directly involved in every property we hold. We answer our own phone, we know our tenants by name, and we make decisions with the next generation in mind rather than the next quarter.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="band" data-reveal>
+    <div class="wrap">
+      <div class="tanrule" role="presentation"></div>
+      <p>Built to be kept, not sold. Held for the long term, and operated to a family standard.</p>
+    </div>
+  </div>
+
+  <!-- SEAM: a "What We Build" values statement (community-minded, long-term; no product menu) can be appended here as a park-for-later module. -->
+
+  <section id="work" data-reveal>
+    <div class="wrap">
+      <h2 class="kicker">What We Do</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="tick">Own &amp; Operate</span>
+          <h3>Commercial Property</h3>
+          <p>We own and directly manage a portfolio of retail, office, and industrial property across Hampton Roads. We hold for the long term and operate it ourselves, to a family standard rather than a fund's timeline.</p>
+        </div>
+        <div class="pillar">
+          <span class="tick">Develop &amp; Improve</span>
+          <h3>Build &amp; Reposition</h3>
+          <p>We develop and reposition our own holdings, from ground-up construction to full renovation, managing design, entitlement, and construction directly. We build the kind of places we would want in our own neighborhood.</p>
+        </div>
+        <div class="pillar">
+          <span class="tick">Brokerage</span>
+          <h3>Byler Realty</h3>
+          <p>Our licensed brokerage represents a small number of clients in commercial and residential transactions across Hampton Roads. We bring an owner's eye to every engagement and advise the way we would on our own account.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="realty" class="hairline" data-reveal>
+    <div class="wrap">
+      <h2 class="kicker">Byler Realty</h2>
+      <div class="prose">
+        <p class="lede" style="max-width:26ch">An owner-operator's eye, on behalf of a few clients.</p>
+        <p>Byler Realty is the brokerage arm of the family company, a licensed Virginia real estate firm that works by referral and long relationship rather than by volume. We list, negotiate, and advise the way we would on our own account, and we take on only the clients we can serve directly.</p>
+        <p class="finehead">Byler Realty is a trade name of Tidewater Investment Co., Inc., a licensed real estate firm in the Commonwealth of Virginia. Kathryn N. Byler, Principal Broker. Virginia Beach, Virginia. (757)&nbsp;490-9700 · <a href="mailto:info@bylerenterprises.com">info@bylerenterprises.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="people" class="hairline" data-reveal>
+    <div class="wrap">
+      <h2 class="kicker">Principals</h2>
+      <div class="people">
+        <div class="person">
+          <h3>Kathryn N. Byler</h3>
+          <p class="role">Principal &amp; Broker of Record</p>
+          <p>Owner and principal of the family companies and the broker of record of Byler Realty. An attorney by training, she has guided the portfolio for decades with the discipline her father built it on.</p>
+        </div>
+        <div class="person">
+          <h3>Patrick Byler Clark</h3>
+          <p class="role">Operations &amp; Development</p>
+          <p>Third generation. Patrick runs the day to day: operations, leasing, development, and the brokerage. He is the working contact for tenants, professionals, and counterparties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEAM: "Property Management / Services", "Track Record (de-identified aggregates)", "Capital & Partners (gated)", and "Careers" each drop in here as a future <section>, no redesign required. -->
+
+  <section id="contact" class="contact hairline" data-reveal>
+    <div class="wrap">
+      <h2 class="kicker">Contact</h2>
+      <dl>
+        <div>
+          <dt>Office</dt>
+          <dd>Virginia Beach, Virginia</dd>
+        </div>
+        <div>
+          <dt>Telephone</dt>
+          <dd><a href="tel:+17574909700">(757) 490-9700</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:info@bylerenterprises.com">info@bylerenterprises.com</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr">2026</span> Byler Enterprises, LLC · Virginia Beach, Virginia</div>
+    <div class="fine">
+      Byler Realty is a trade name of Tidewater Investment Co., Inc., a licensed real estate firm in the Commonwealth of Virginia. Principal office: Virginia Beach, Virginia. Kathryn N. Byler, Principal Broker.<br>
+      This site collects no personal information, sets no cookies, and uses no third-party trackers.<br>
+      We aim to meet WCAG AA accessibility standards. If anything here is difficult to use, write to <a href="mailto:info@bylerenterprises.com">info@bylerenterprises.com</a> and we will fix it.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto-update the copyright year so the footer never reads stale.
+  (function(){var y=document.getElementById('yr');if(y){y.textContent=String(new Date().getFullYear());}})();
+  // One quiet section reveal, fully skipped when the reader prefers reduced motion or JS is off.
+  (function(){
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    if(!('IntersectionObserver'in window))return;
+    var els=document.querySelectorAll('[data-reveal]');
+    els.forEach(function(el){el.classList.add('pre');});
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el);});
+  })();
+</script>
+</body>
+</html>
